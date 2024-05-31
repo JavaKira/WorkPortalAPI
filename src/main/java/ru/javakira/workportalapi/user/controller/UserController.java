@@ -21,22 +21,22 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public void register(UserRegisterRequest request) {
+    public void register(@RequestBody UserRegisterRequest request) {
 
     }
 
     @PatchMapping("/update")
-    public void update(UserUpdateRequest request) {
+    public void update(@RequestBody UserUpdateRequest request) {
 
     }
 
     @PutMapping("/update/summary")
-    public void updateSummary(UserSummaryUpdateRequest request) {
+    public void updateSummary(@RequestBody UserSummaryUpdateRequest request) {
 
     }
 
     @PatchMapping("/update/credentials")
-    public void updateCredentials(UserCredentialsUpdateRequest request) {
+    public void updateCredentials(@RequestBody UserCredentialsUpdateRequest request) {
 
     }
 }
