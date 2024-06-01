@@ -28,16 +28,13 @@ public class User implements UserDetails {
     private String firstName;
     private String lastName;
     private String surname;
-    private String screenName;
+    private String phoneNumber;
+    private String email;
     private String username;
     private String password;
     @ManyToOne
     private UserCategory userCategory;
     private boolean employer;
-
-    public Optional<String> getScreenName() {
-        return Optional.ofNullable(screenName);
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

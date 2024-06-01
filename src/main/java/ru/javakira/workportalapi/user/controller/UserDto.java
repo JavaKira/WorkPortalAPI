@@ -16,7 +16,8 @@ public class UserDto {
     private String firstName;
     private String lastName;
     private String surname;
-    private String screenName;
+    private String phoneNumber;
+    private String email;
     private UserCategory userCategory;
     private boolean employer;
 
@@ -27,7 +28,8 @@ public class UserDto {
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
                 .surname(user.getSurname())
-                .screenName(user.getScreenName().orElse("null"))
+                .email(user.getEmail())
+                .phoneNumber(user.getPhoneNumber())
                 .userCategory(user.getUserCategory())
                 .employer(user.isEmployer())
                 .build();

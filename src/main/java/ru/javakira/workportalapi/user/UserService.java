@@ -14,6 +14,31 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository repository;
 
+    public void register(
+        String firstName,
+        String lastName,
+        String surname,
+        boolean employer,
+        String phoneNumber,
+        String email,
+        String username,
+        String password
+    ) {
+        User user = User
+                .builder()
+                .firstName(firstName)
+                .lastName(lastName)
+                .surname(surname)
+                .employer(employer)
+                .phoneNumber(phoneNumber)
+                .email(email)
+                .username(username)
+                .password(passwordEncoder.encode(password))
+                .build();
+
+        repository.save(user);
+    }
+
     public User user(long id) {
         Optional<User> userOptional = repository.findById(id);
         if (userOptional.isEmpty())

@@ -26,7 +26,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry
                         .requestMatchers(
-                                "/api/register",
+                                "/api/user/register",
                                 "/api/auth",
                                 "/v3/api-docs",
                                 "/v3/api-docs/**",
